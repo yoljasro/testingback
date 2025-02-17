@@ -1,0 +1,43 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "this is testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.mjs"
+  },
+  "author": "Jas",
+  "license": "ISC",
+  "dependencies": {
+    "@admin-bro/express": "^3.1.0",
+    "@admin-bro/mongoose": "^1.1.0",
+    "@adminjs/express": "^6.1.1",
+    "@adminjs/mongoose": "^4.1.0",
+    "admin-bro": "^4.0.1",
+    "admin-bro-expressjs": "^2.1.1",
+    "admin-bro-mongoose": "^0.5.2",
+    "adminjs": "^7.8.13",
+    "argon2": "^0.41.1",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "chart.js": "^4.4.7",
+    "connect-mongo": "^5.1.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
+    "nodemon": "^3.1.9",
+    "path": "^0.12.7",
+    "pdfkit": "^0.16.0",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^18.3.1",
+    "react-pdf": "^9.2.1"
+  }
+}
