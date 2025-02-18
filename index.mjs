@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   id: { type: String, required: true },
-  idName: { type: String, required: true },
+  // idName: { type: String, required: true },
   name: { type: String, required: true },
   age: { type: Number, required: true },
   gender: { type: String, required: true },
@@ -742,7 +742,7 @@ app.post("/api/submit-test", async (req, res) => {
   try {
     const {
       email, password, name, age, gender, companyName, region,
-      selectedID, testResult, testResultThree, idName
+      selectedID, testResult, testResultThree, 
     } = req.body;
 
     let user = await User.findOne({ email });
@@ -758,7 +758,6 @@ app.post("/api/submit-test", async (req, res) => {
         gender,
         companyName,
         region,
-        idName,
         testResults: testResult, // ✅ TestQuestionTwo natijalari
         testResultsThree: testResultThree, // ✅ TestQuestionThree natijalari qo‘shildi
         interpretation: "", 
@@ -774,7 +773,7 @@ app.post("/api/submit-test", async (req, res) => {
       user.companyName = companyName;
       user.region = region;
       user.id = selectedID;
-      user.idName = idName;
+      // user.idName = idName;
       
       // ✅ Ikkala test natijalarini yangilash
       user.testResults = [...user.testResults, ...testResult]; 
