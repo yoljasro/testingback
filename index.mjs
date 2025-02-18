@@ -213,7 +213,7 @@ const adminJs = new AdminJS({
         parent: { name: "Foydalanuvchilar", icon: "User" },
         listProperties: ["email", "id", "name", "age", "gender", "companyName", "region", "role", "interpretation", "interpretationThree"],
         showProperties: ["email", "id", "name", "age", "gender", "companyName", "region", "interpretation", "interpretationThree", "testResults", "testResultsThree", "role"],
-        editProperties: ["email", "password", "id", "name", "age", "gender", "idName", "companyName", "region", "testResults", "testResultsThree", "interpretation", "interpretationThree", "role"],
+        editProperties: ["email", "password", "id", "name", "age", "gender", "companyName", "region", "testResults", "testResultsThree", "interpretation", "interpretationThree", "role"],
         properties: {
           interpretation: {
             type: "string",
