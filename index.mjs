@@ -562,30 +562,13 @@ const transporter = nodemailer.createTransport({
 app.post("/api/register", (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
-    return res.status(400).json({ success: false, message: "Email и пароль обязательны." });
+      return res.status(400).json({ success: false, message: "Email и пароль обязательны." });
   }
 
-  const todayDate = new Date();
-  const formattedDate = todayDate.getFullYear() + "-" + (todayDate.getMonth() + 1).toString().padStart(2, "0") + "-" + todayDate.getDate().toString().padStart(2, "0");
-  const randomID = crypto.randomBytes(3).toString("hex");
-  const id = `${formattedDate}-${randomID}`;
-
-  users[email] = { password, id };
-
-  transporter.sendMail(
-    {
-      from: "saidaliyevjasur450@gmail.com",
-      to: email,
-      subject: "ID Подтверждение",
-      text: `Подтверждающий ID: ${id}`,
-    },
-    (err) => {
-      if (err) {
-        return res.status(500).json({ success: false, message: "Ошибка при отправке email." });
-      }
-      res.json({ success: true, message: "Email отправлен." });
-    }
-  );
+  // Foydalanuvchi ma'lumotlarini saqlash
+  users[email] = { password };
+  
+  res.json({ success: true, message: "Регистрация успешна." }); // Email jo‘natish yo‘q
 });
 
 // Эндпоинт для регистрации buyurtmachi
