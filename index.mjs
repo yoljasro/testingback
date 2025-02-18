@@ -553,6 +553,9 @@ const transporter = nodemailer.createTransport({
     user: "saidaliyevjasur450@gmail.com",
     pass: "ckyt spcm yjlz ftse",
   },
+  secure: true,
+  port: 465,
+  debug: true, // Debug loglarini yoqish
 });
 
 // Эндпоинт для регистрации xodim
